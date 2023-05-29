@@ -1,0 +1,18 @@
+proc logistic data = mylib1.Logistic_reg_german_bank DESC;
+model response =
+CHK_ACCT
+DURATION
+HISTORY
+SAV_ACCT
+NEW_CAR
+EDUCATION
+GUARANTOR
+MALE_SINGLE
+OTHER_INSTALL
+INSTALL_RATE
+AMOUNT
+USED_CAR
+FOREIGN
+RENT / ctable PPROB = (0 to 1 BY 0.01)
+;
+run;

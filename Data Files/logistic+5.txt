@@ -1,0 +1,3 @@
+proc freq data = pred_result;
+table response*status/norow nocol;
+run;

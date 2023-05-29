@@ -1,0 +1,11 @@
+ibname mylib1 "D:\KONIKA 19.03.17\E Drive Backup\Analytics\Analytics\Analytics datasets & case studies";
+
+
+proc reg data = mylib1.Linear_reg_retail;
+model Customer_Satisfaction = PRODUCT_QUALITY--Delivery_Speed/vif;
+run;
+
+
+proc reg data = mylib1.Linear_reg_retail;
+model Customer_Satisfaction = PRODUCT_QUALITY--price_flexibility/vif;
+run;

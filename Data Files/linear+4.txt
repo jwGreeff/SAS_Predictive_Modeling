@@ -1,0 +1,10 @@
+proc reg data = Training;
+model Customer_Satisfaction = Product_Quality E_Commerce Advertising Product_Line
+Salesforce_Image Competitive_Pricing Packaging Order_Billing Price_Flexibility;
+output out = Trainpred P=predicted;
+run;
+quit;
+
+proc corr data = Trainpred;
+var Customer_Satisfaction Predicted;
+run;

@@ -1,0 +1,15 @@
+proc arima data = mylib1.Timeseries_Airline;
+identify var = passengers(1);
+run;
+quit; 
+
+proc arima data = mylib1.Timeseries_Airline;
+identify var = passengers(2);
+run;
+quit;
+
+
+proc arima data = mylib1.Timeseries_airline;
+identify var = passengers(1,1);
+run;
+quit; 

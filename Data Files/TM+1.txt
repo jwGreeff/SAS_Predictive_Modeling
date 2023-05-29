@@ -1,0 +1,19 @@
+libname mylib1 "D:\KONIKA 19.03.17\E Drive Backup\Analytics\Analytics\Analytics datasets & case studies";
+
+proc gplot data = mylib1.Timeseries_Airline;
+plot passengers * date;
+run;
+quit;
+
+
+proc arima data = mylib1.Timeseries_Airline;
+identify var = passengers;
+run;
+quit;
+
+/*(1,12)*/
+
+proc arima data = mylib1.Timeseries_Airline;
+identify var = passengers stationarity = (ADF=(1));
+run;
+quit;

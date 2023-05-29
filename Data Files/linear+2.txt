@@ -1,0 +1,7 @@
+proc reg data = mylib1.Linear_reg_retail;
+model Customer_Satisfaction = PRODUCT_QUALITY--price_flexibility/dw;
+run;
+
+proc reg data = mylib1.Linear_reg_retail;
+model Customer_Satisfaction = PRODUCT_QUALITY--price_flexibility/spec;
+run;

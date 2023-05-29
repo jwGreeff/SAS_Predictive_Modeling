@@ -1,0 +1,5 @@
+data pred_result;
+set result;
+if predicted > 0.5 then status = 1;
+else status = 0;
+run;

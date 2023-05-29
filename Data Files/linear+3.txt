@@ -1,0 +1,15 @@
+data training validation;
+set mylib1.Linear_reg_Retail;
+if ranuni(0) < 0.7 then output training;
+else output validation;
+run;
+
+
+proc reg data = Training;
+model Customer_Satisfaction = PRODUCT_QUALITY--Price_flexibility/selection=adjrsq;
+run;
+quit;
+
+/**/
+/*Product_Quality E_Commerce Advertising Product_Line */
+/*Salesforce_Image Competitive_Pricing Packaging Order_Billing Price_Flexibility*/

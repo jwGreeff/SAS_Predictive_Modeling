@@ -1,0 +1,4 @@
+proc import data ="D:\konika\newfolder\linear.csv"
+out = linear
+replace;
+run;

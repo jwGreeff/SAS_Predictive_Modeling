@@ -1,0 +1,5 @@
+libname mylib1 "D:\KONIKA 19.03.17\E Drive Backup\Analytics\Analytics\Analytics datasets & case studies";
+
+proc logistic data = mylib1.Logistic_reg_german_bank DESC;
+model response = CHK_ACCT--Foreign/Selection=Stepwise lackfit;
+run;

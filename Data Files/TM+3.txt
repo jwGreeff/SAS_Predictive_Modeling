@@ -1,0 +1,19 @@
+proc arima data = mylib1.Timeseries_airline;
+identify var = passengers(1,12);
+run;
+quit;
+
+
+proc arima data = mylib1.Timeseries_airline;
+identify var = passengers(1,12) MINIC;
+run;
+quit;
+
+/*p=1, q=0*/
+
+proc arima data = mylib1.Timeseries_airline;
+identify var = passengers(1,12);
+estimate P = 1 Q =0;
+forecast lead = 12;
+run;
+quit;

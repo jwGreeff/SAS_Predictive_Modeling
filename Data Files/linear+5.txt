@@ -1,0 +1,19 @@
+data validation_Result;
+set validation;
+predicted= -2.12140+
++Product_Quality * 0.36778+
+E_Commerce * -0.31217+
+Advertising * -0.07738+
+Product_Line * 0.42742+
+Salesforce_Image * 0.67929+
+Competitive_Pricing * -0.04749+
+Packaging * 0.04230+
+Order_Billing * 0.09818+
+Price_Flexibility * 0.29264;
+run;
+quit;
+
+
+proc corr data = validation_result;
+var Customer_Satisfaction Predicted;
+run;
